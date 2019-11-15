@@ -1,6 +1,6 @@
 <template>
     <div>
-        <slot v-bind:user="user"></slot>
+        <slot v-bind:data="data"></slot>
         <!-- <ChildrenComponent>
         <p>Hello from the parent!</p>
         </ChildrenComponent>
@@ -12,15 +12,21 @@
 export default {
     data() {
         return {
-            data: {
-                name: 'Luas',
-                nickName: 'Loquillo'
-            },
-            user: {
-                name: 'me',
-                lastname: 'N',
-                surname: 'Me'
-            },
+            data: [
+                {
+                    id: 1,
+                    name: 'Luas',
+                    nickName: 'Loquillo'
+                }, {
+                    id: 2,
+                    name: 'Saul',
+                    nickName: 'Ls'
+                }, {
+                    id: 3,
+                    name: 'Loquillo',
+                    nickName: 'M'
+                }
+            ],
             hello: 'Hello to my children component!'
         }
     }

@@ -1,7 +1,7 @@
 <template>
   <div class="home">
     <img alt="Vue logo" src="../assets/logo.png" />
-    <Counter :numbers="numbers" @number-added="alertAny"/><br />
+    <Counter :numbers="numbers" @onClick="addtoToCounter"/><br />
     <div class="columns">
       <div class="column is-11">
         <AddCounter></AddCounter>
@@ -10,7 +10,6 @@
         <RemoveCounter></RemoveCounter>
       </div>
     </div>
-    <!-- <HelloWorld msg="Welcome to Your Vue.js App" /> -->
   </div>
 </template>
 
@@ -19,12 +18,10 @@
 import Counter from '@/components/Counter';
 import AddCounter from '@/components/AddCounter';
 import RemoveCounter from '@/components/RemoveCounter';
-//import HelloWorld from "@/components/HelloWorld";
 
 export default {
   name: "home",
   components: {
-    //HelloWorld,
     Counter,
     AddCounter,
     RemoveCounter
@@ -35,7 +32,7 @@ export default {
     }
   },
   methods: {
-    alertAny(n) {
+    addtoToCounter(n) {
       this.numbers.push(n);
     }
   }

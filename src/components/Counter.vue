@@ -9,7 +9,7 @@
           Local data:
         {{numbers}}
         <input v-model="number" type="number"/>
-        <button @click="$emit('number-added', Number(number))">Add number</button>
+        <button @click="$emit('onClick', Number(number))">Add number</button>
       </h1>
     </div>
   </div>
